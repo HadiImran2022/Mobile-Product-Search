@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Product Search Assignment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        /* #searchType{
+            width: 100px;
+            font-size: 17px;
+            color: black;
+            text-align: center;
+            height: 30px;
+        }
+        #searchInput{
+            width: 300px;
+            height: 35px;
+        }
+        #searchInput::placeholder{
+        } */
+        .notTouch:hover{
+            position: relative;
+            left: 600px;
+            top: 600px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form id="searchForm">
+        <label for="searchType">Search by:</label>
+        <select id="searchType" onchange="enableSearch()">
+            <option value="" disabled selected>Select an option</option>
+            <option value="brand">Brand</option>
+            <option value="model">Model</option>
+            <option value="price">Price</option>
+        </select>
+
+        <label for="searchInput">Enter search</label>
+        <input size="30" type="text" id="searchInput" placeholder="Select a search type first" disabled>
+
+        <button class="notTouch" type="button" onclick="searchProduct()">Search</button>
+    </form>
+
+    <div id="productDetails"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
